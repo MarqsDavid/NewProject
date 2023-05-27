@@ -204,7 +204,6 @@
         </div>
     </div>
 </body>
-
 <script src="../js/userAdmin.js"></script>
 
 </html>
