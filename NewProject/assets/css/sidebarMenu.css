@@ -84,7 +84,17 @@ a{
     padding-top: 2px;
 }
 .navbar-logo img{
-    width: 120px;
+ 
+    width: 140px;
+   
+
+}
+
+#logo-img{
+    
+    width: 140px;
+   
+
 }
 .navigation-bar{
     height: 80px;
@@ -197,3 +207,4 @@ a{
 .overview-section-item:hover .btn-outline-sm{
     border-color: var(--white-color);
 }
+
