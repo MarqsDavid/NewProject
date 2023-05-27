@@ -87,7 +87,7 @@
                         </a>
                     </li>
                     <li class="navbar-sb-link my-3">
-                        <a href="../pages/moveAssets.php"  class="text-decoration-none d-flex align-items-center justify-content-between">
+                        <a href="../pages/moveAssets.php" class="text-decoration-none d-flex align-items-center justify-content-between">
                             <div class="text-light-blue d-flex align-items-center">
                                 <span class="navbar-sb-icon me-3">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
@@ -142,7 +142,7 @@
                         </a>
                     </li>
                     <li class="navbar-sb-link my-3">
-                        <a href="#"  class="text-decoration-none d-flex align-items-center justify-content-between">
+                        <a href="#" class="text-decoration-none d-flex align-items-center justify-content-between">
                             <div class="text-light-blue d-flex align-items-center">
                                 <span class="navbar-sb-icon me-3">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-file-earmark-code-fill" viewBox="0 0 16 16">
