@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="navigation-bar-right col-6 d-flex align-items-center justify-content-end">
-                    <a href="#" class="profile-btn bg-blue text-white btn-circle me-3">
+                    <a href="../pages/profile.php" class="profile-btn bg-blue text-white btn-circle me-3">
                         <svg width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                         </svg>
@@ -160,7 +160,7 @@
                 <h5 class="text-uppercase text-grey navbar-sb-item-title fs-12 ls-1">account</h5>
                 <ul class="navbar-sb-links p-0 list-unstyled">
                     <li class="navbar-sb-link my-3">
-                        <a href="#" class="text-decoration-none d-flex align-items-center justify-content-between">
+                        <a  href="../pages/profile.php" class="text-decoration-none d-flex align-items-center justify-content-between">
                             <div class="text-light-blue d-flex align-items-center">
                                 <span class="navbar-sb-icon me-3">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
@@ -199,7 +199,7 @@
 
 </div>
 
-<!----===== Modal Adicionar ===== -->
+<!----===== Modal patrimonyAdd ===== -->
 
 <div class="modal" id="patrimonyAdd">
     <div class="modal-dialog">
@@ -236,6 +236,16 @@
                     <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Cancela</button>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<!----===== Modal  ===== -->
+
+<div class="modal" id="profile">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
         </div>
     </div>
 </div>
