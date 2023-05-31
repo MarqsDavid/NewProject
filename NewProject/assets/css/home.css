@@ -3,7 +3,7 @@
 
 /* =============== Globals ============== */
 * {
-  font-family: 'Roboto', sans-serif!important;
+  font-family: 'Roboto', sans-serif !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,6 +44,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .cardHeader h2 {
   font-weight: 500;
   color: var(--blue);
@@ -55,33 +56,42 @@
   border-collapse: collapse;
   margin-top: 3px;
 }
+
 .details table thead td {
   font-weight: 600;
 }
+
 .details .recentMovement table tr {
   color: var(--black1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .details .recentMovement table tr:last-child {
   border-bottom: none;
 }
+
 .details .recentMovement table tbody tr:hover {
   background: var(--blue);
   color: var(--white);
   cursor: pointer;
 }
+
 .details .recentMovement table tr td {
   padding: 25px;
 }
+
 .details .recentMovement table tr td:last-child {
   text-align: end;
 }
+
 .details .recentMovement table tr td:nth-child(2) {
   text-align: end;
 }
+
 .details .recentMovement table tr td:nth-child(3) {
   text-align: center;
 }
+
 .status.add {
   padding: 10px 10px;
   background: #8de02c;
@@ -90,6 +100,7 @@
   font-size: 14px;
   font-weight: 500;
 }
+
 .status.move {
   padding: 10px 10px;
   background: #e9b10a;
@@ -98,6 +109,7 @@
   font-size: 14px;
   font-weight: 500;
 }
+
 .status.exit {
   padding: 10px 10px;
   background: #f00;
@@ -117,6 +129,7 @@
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
+
 .recentAlteration .imgBx {
   position: relative;
   width: 40px;
@@ -124,6 +137,7 @@
   border-radius: 50px;
   overflow: hidden;
 }
+
 .recentAlteration .imgBx img {
   position: absolute;
   top: 0;
@@ -132,23 +146,28 @@
   height: 100%;
   object-fit: cover;
 }
+
 .recentAlteration table tr td {
   padding: 10px 10px;
 }
+
 .recentAlteration table tr td h4 {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2rem;
 }
+
 .recentAlteration table tr td h4 span {
   font-size: 14px;
   color: var(--black2);
 }
+
 .recentAlteration table tr:hover {
   background: var(--blue);
   color: var(--white);
   cursor: pointer;
 }
+
 .recentAlteration table tr:hover td h4 span {
   color: var(--white);
 }
@@ -160,9 +179,11 @@
   .details {
     grid-template-columns: 1fr;
   }
+
   .recentMovement {
     overflow-x: auto;
   }
+
   .status.inProgress {
     white-space: nowrap;
   }
@@ -172,24 +193,30 @@
   .cardBox {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .cardHeader h2 {
     font-size: 20px;
   }
+
   .user {
     min-width: 40px;
   }
+
   .navigation {
     width: 100%;
     left: -100%;
     z-index: 1000;
   }
+
   .navigation.active {
     width: 100%;
     left: 0;
   }
+
   .toggle {
     z-index: 10001;
   }
+
   .main.active .toggle {
     color: #fff;
     position: fixed;

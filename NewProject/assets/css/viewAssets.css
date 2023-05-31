@@ -1,38 +1,38 @@
 * {
-    font-family: 'Roboto', sans-serif!important;
+    font-family: 'Roboto', sans-serif !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
+}
+
 .table-wrapper {
 
     overflow-y: scroll;
     overflow-x: scroll;
     height: fit-content;
     max-height: 66.4vh;
-    
+
     margin-top: 22px;
-    
+
     margin: 15px;
     padding-bottom: 20px;
-    
+
 }
 
 
 table {
-    
+
     min-width: max-content;
-    
+
     border-collapse: separate;
-    border-spacing: 0px;    
-    
+    border-spacing: 0px;
+
 }
 
 
 
-table th{
-    
+table th {
+
 
     text-align: center;
     font-weight: normal;
@@ -40,25 +40,26 @@ table th{
     border: 1.5px solid #87CEFA;
     outline: 0.7px solid #87CEFA;
 
-} 
+}
 
 
 
-table th, table td {
+table th,
+table td {
     width: 190px;
     padding: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
-    
+
 }
 
 table td {
     text-align: left;
-    
+
     font-size: 15px;
     border: 1px solid #87CEFA;
     padding-left: 20px;
-    
+
 }
 
 
@@ -68,7 +69,7 @@ table td {
     padding: 20px 20px;
     margin: 30px 0;
     border-radius: 5px;
-    
+
 }
 
 .table-title {
@@ -86,11 +87,12 @@ table td {
     font-size: 24px;
 }
 
-.tbl-container{
+.tbl-container {
     max-width: fit-content;
     max-height: fit-content;
 }
-.tbl.fixed{
+
+.tbl.fixed {
     overflow-x: scroll;
     overflow-y: scroll;
     max-width: 70vh;
@@ -129,6 +131,3 @@ table.table td a {
     text-decoration: none;
     outline: none !important;
 }
-
-
-

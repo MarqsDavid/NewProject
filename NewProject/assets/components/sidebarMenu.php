@@ -155,7 +155,7 @@
                 <h5 class="text-uppercase text-grey navbar-sb-item-title fs-12 ls-1">account</h5>
                 <ul class="navbar-sb-links p-0 list-unstyled">
                     <li class="navbar-sb-link my-3">
-                        <a  href="../pages/profile.php" class="text-decoration-none d-flex align-items-center justify-content-between">
+                        <a href="../pages/profile.php" class="text-decoration-none d-flex align-items-center justify-content-between">
                             <div class="text-light-blue d-flex align-items-center">
                                 <span class="navbar-sb-icon me-3">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
@@ -240,7 +240,7 @@
 <div class="modal" id="profile">
     <div class="modal-dialog">
         <div class="modal-content">
-            
+
         </div>
     </div>
 </div>
