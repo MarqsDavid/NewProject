@@ -73,7 +73,7 @@
 .details .recentMovement table tbody tr:hover {
   background: var(--blue);
   color: var(--white);
-  cursor: pointer;
+  
 }
 
 .details .recentMovement table tr td {
@@ -165,7 +165,7 @@
 .recentAlteration table tr:hover {
   background: var(--blue);
   color: var(--white);
-  cursor: pointer;
+  
 }
 
 .recentAlteration table tr:hover td h4 span {
