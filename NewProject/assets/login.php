@@ -53,25 +53,25 @@
                         <br />
                     </form>
                     <!-- Login Admin -->
-                    <form action="post" class="clearfix form-hidden" id="login-admin">
+                    <form action="../assets/php/loginMaster.php" method="POST" class="clearfix form-hidden" id="login-admin">
                         <h1>Master User</h1>
                         <div class="col-md-12">
 
                             <div class="input-group blmd-form">
                                 <div class="blmd-line">
-                                    <input type="text" name="username" autocomplete="off" id="username" class="form-control">
+                                    <input type="text" name="username"  id="username" class="form-control">
                                     <label class="blmd-label">Username</label>
                                 </div>
                             </div>
                             <div class="input-group blmd-form">
                                 <div class="blmd-line">
-                                    <input type="password" name="passwordAdmin" autocomplete="off" id="password" class="form-control">
+                                    <input type="password" name="passwordAdmin"  id="password" class="form-control">
                                     <label class="blmd-label">Password</label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12 text-center">
-                            <button id="btn-admin" type="button" class="btn btn-blmd ripple-effect btn-warning btn-lg btn-block">Login</button>
+                            <button id="btn-admin" name="submit" type="submit" class="btn btn-blmd ripple-effect btn-warning btn-lg btn-block">Login</button>
                         </div>
                         <br />
                     </form>
