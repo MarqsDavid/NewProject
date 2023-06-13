@@ -77,7 +77,7 @@
                           echo  "<td>".$user_data['phone']."</td>";
                           echo  "<td>".$user_data['dateOfCiation']."</td>";
                           echo   "<td>";
-                          echo  "<a  type='button' class='edit' data-toggle='modal' data-target='#editEmployeeModal'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
+                          echo  "<a href='# type='button' class='edit' data-toggle='modal' data-target='#editEmployeeModal'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
                           echo  "<a href='#' type='button' class='delete' data-toggle='modal' data-target='#confirm-delete'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>";
 
                         }
