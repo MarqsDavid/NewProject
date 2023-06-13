@@ -77,7 +77,7 @@
                           echo  "<td>".$user_data['phone']."</td>";
                           echo  "<td>".$user_data['dateOfCiation']."</td>";
                           echo   "<td>";
-                          echo  "<a href='#editEmployeeModal' class='edit' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
+                          echo  "<a  type='button' class='edit' data-toggle='modal' data-target='#editEmployeeModal'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
                           echo  "<a href='#' type='button' class='delete' data-toggle='modal' data-target='#confirm-delete'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>";
 
                         }
@@ -132,31 +132,33 @@
     <div id="editEmployeeModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form>
+                <form method="POST" action="../php/editUsers.php">
+                    
                     <div class="modal-header">
                         <h4 class="modal-title">Edit Employee</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
+                    <input type="hidden" id='id' name="id" value="id">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" name="alterName" class="form-control" placeholder="Enter first name" required>
+                            <input type="text" id='alterName' name="alterName" class="form-control" placeholder="Enter first name"  value="" required >
                         </div>
                         <div class="form-group">
                             <label>Last name</label>
-                            <input type="text" name="alterLastName" class="form-control" placeholder="Enter the last name" required>
+                            <input type="text" id='alterLastName' name="alterLastName" class="form-control" placeholder="Enter the last name" value="" required >
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="alterEmail" class="form-control" placeholder="Enter the email" required>
+                            <input type="email" name="alterEmail" class="form-control" placeholder="Enter the email" value="" required >
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" name="alterPasswordUsers" class="form-control" placeholder="Type the password" required></textarea>
+                            <input type="password" name="alterPasswordUsers" class="form-control" placeholder="Type the password" value="" required></textarea>
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="number" name="alterPhone"  class="form-control" placeholder="(xx) xxxx-xxxx" required>
+                            <input type="number" name="alterPhone"  class="form-control" placeholder="(xx) xxxx-xxxx" value="" required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -210,5 +212,4 @@ $(document).ready(function() {
     });
 });
 </script>
-
 </html>
