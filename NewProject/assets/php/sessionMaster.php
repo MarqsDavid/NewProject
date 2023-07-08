@@ -10,7 +10,7 @@
         unset($_SESSION['passwordAdmin']);
         header('Location: ../login.php');
     }
-
+    $logged = $_SESSION['username'];
     $sql= "SELECT * FROM  users ORDER BY  id DESC";
 
     $result = $conexao->query($sql);

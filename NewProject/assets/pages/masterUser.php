@@ -22,7 +22,7 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>ADMIN</h2>
+                        <h2><?php echo "$logged";?></h2>
                     </div>
                     <div class="col-sm-6">
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
@@ -51,6 +51,7 @@
                                 <label for="selectAll"></label>
                             </span>
                         </th>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Last name</th>
                         <th>Email</th>
@@ -60,16 +61,18 @@
                         <th>Action</th>
                     </tr>
                 </thead>
+
                 <?php
                         while($user_data = mysqli_fetch_assoc($result)) {
 
                           echo  "<tr>";
                           echo  "<td>";
                           echo  "<span class='custom-checkbox'>";
-                          echo     "<input type='checkbox' id='checkbox1' name='options[]' value='1'>";
-                          echo     "<label for='checkbox1'></label>";
+                          echo  "<input type='checkbox' id='checkbox1' name='options[]' value='1'>";
+                          echo  "<label for='checkbox1'></label>";
                           echo  "</span>";
                           echo  "</td>";
+                          echo  "<td>".$user_data['id']."</td>";
                           echo  "<td>".$user_data['nameUser']."</td>";
                           echo  "<td>".$user_data['lastName']."</td>";
                           echo  "<td>".$user_data['email']."</td>";
@@ -77,12 +80,11 @@
                           echo  "<td>".$user_data['phone']."</td>";
                           echo  "<td>".$user_data['dateOfCiation']."</td>";
                           echo   "<td>";
-                          echo  "<a href='# type='button' class='edit' data-toggle='modal' data-target='#editEmployeeModal'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
+                          echo  "<a href='# type='button' class='edit' data-toggle='modal' data-target='#editEmployeeModal' ><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
                           echo  "<a href='#' type='button' class='delete' data-toggle='modal' data-target='#confirm-delete'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>";
 
                         }
                         ?>
-
         </div>
     </div>
     <!-- Add Modal HTML -->
@@ -141,7 +143,7 @@
                     <input type="hidden" id='id' name="id" value="id">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Name</label>
+                             <label for="id">ID do Usuário:</label>
                             <input type="text" id='alterName' name="alterName" class="form-control" placeholder="Enter first name"  value="" required >
                         </div>
                         <div class="form-group">
