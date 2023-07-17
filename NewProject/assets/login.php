@@ -37,7 +37,7 @@
                             <div class="input-group blmd-form">
                                 <div class="blmd-line">
                                     <input type="text" name="email" autocomplete="off" id="username" class="form-control " required>
-                                    <label class="blmd-label">Email</label>
+                                    <label class="blmd-label">teste</label>
                                 </div>
                             </div>
                             <div class="input-group blmd-form">
