@@ -30,7 +30,7 @@
                 </div>
                 <div class="blmd-continer">
                     <!-- Login Users -->
-                    <form method="post" action="./assets/php/loginUser.php" class="clearfix" id="login-form">
+                    <form action="../assets/php/loginUser.php" method="POST" class="clearfix" id="login-form">
                         <h1>Login</h1>
                         <div class="col-md-12">
 
@@ -42,13 +42,13 @@
                             </div>
                             <div class="input-group blmd-form">
                                 <div class="blmd-line">
-                                    <input type="password" name="emailPassword" autocomplete="off" id="password" class="form-control" required>
+                                    <input type="password" name="passwordUsers" autocomplete="off" id="password" class="form-control" required>
                                     <label class="blmd-label">Password</label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12 text-center">
-                            <button id="btn-login" type="submit" value="Entrar" class="btn btn-blmd ripple-effect btn-success btn-lg btn-block">Login</button>
+                            <button id="btn-login" name="submit" type="submit" value="Entra" class="btn btn-blmd ripple-effect btn-success btn-lg btn-block">Login</button>
                         </div>
                         <br />
                     </form>

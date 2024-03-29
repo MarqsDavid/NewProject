@@ -188,7 +188,7 @@
                 <h5 class="text-uppercase text-grey navbar-sb-item-title fs-12 ls-1">misc pages</h5>
                 <ul class="navbar-sb-links p-0 list-unstyled">
                     <li class="navbar-sb-link my-3">
-                        <a href="#" class="text-decoration-none d-flex align-items-center justify-content-between">
+                        <a href="../php/exitUser.php" class="text-decoration-none d-flex align-items-center justify-content-between">
                             <div class="text-light-blue d-flex align-items-center">
                                 <span class="navbar-sb-icon me-3">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
@@ -213,7 +213,7 @@
 <div class="modal" id="patrimonyAdd">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form action="../php/InsertEquity.php" method="POST">
                 <div class="modal-header">
                     <h4 class="modal-title">Registration reports</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

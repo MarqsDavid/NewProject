@@ -1,3 +1,4 @@
+<?php include('../php/sessionUser.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,89 +66,21 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
+                                        <?php
+                                        while ($user_data = mysqli_fetch_assoc($result)) {
+
+                                            echo "<tr>";
+
+                                            echo "<td>" . $user_data['ddescription'] . "</td>";
+                                            echo "<td>" . $user_data['assetNumber'] . "</td>";
+                                            echo "<td>" . $user_data['numberLocation'] . "</td>";
+                                            echo "<td>" . $user_data['responsible'] . "</td>";
+                                            echo "<td>" . $user_data['dateCreation'] . "</td>";
+
+
+                                            echo "</tr>";
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
