@@ -1,4 +1,4 @@
-<?php include('../php/sessionUser.php'); ?>
+<?php include('../php/sessionWrttenOff.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +23,7 @@
         <div class="row py-3">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <div class="dashboard-title-text">
-                    <h2>David Marques Mega de Sousa</h2>
+                    <h2><?php echo "$nameUser", "$lastName";?></h2>
                     <p class="text-grey">On-line</p>
                 </div>
             </div>
@@ -66,89 +66,18 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notebook dell vostro</td>
-                                            <td>11910</td>
-                                            <td>0013/Atendimento</td>
-                                            <td>Nathalia</td>
-                                            <td>2023-04-18 00:00:001</td>
-                                        </tr>
+                                    <?php
+                                while ($user_data = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>" . htmlspecialchars($user_data['ddescription']) . "</td>";
+                                    echo "<td>" . htmlspecialchars($user_data['assetNumber']) . "</td>";
+                                    echo "<td>" . htmlspecialchars($user_data['numberLocation']) . "</td>";
+                                    echo "<td>" . htmlspecialchars($user_data['responsible']) . "</td>";
+                                    echo "<td>" . htmlspecialchars($user_data['dateCreation']) . "</td>";
+                             
+                                    echo "</tr>";
+                                }
+                                ?>
                                     </tbody>
                                 </table>
                             </div>

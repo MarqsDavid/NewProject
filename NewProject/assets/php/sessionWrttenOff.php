@@ -9,7 +9,9 @@
         unset($_SESSION['emailPassword']);
         header('Location: ../login.php');
     }
-    $logado = $_SESSION['email'];
+    $nameUser = $_SESSION['nameUser'];
+    $lastName = $_SESSION['lastName'];
+    $phone = $_SESSION['phone'];
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
@@ -17,7 +19,7 @@
     }
     else
     {
-        $sql= "SELECT * FROM  assets ORDER BY  id DESC";
+        $sql= "SELECT * FROM  assets WHERE sstatus = 3 ORDER BY  id DESC";
     }
 
     $result = $conexao->query($sql);

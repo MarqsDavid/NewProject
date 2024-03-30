@@ -1,4 +1,4 @@
-<?php include('../php/sessionUser.php'); ?>
+<?php include('../php/sessionHome.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +20,7 @@
         <div class="row py-3">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <div class="dashboard-title-text">
-                    <h2>David Marques Mega de Sousa</h2>
+                    <h2><?php echo "$nameUser", "$lastName";?></h2>
                     <p class="text-grey">On-line</p>
                 </div>
             </div>

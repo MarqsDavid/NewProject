@@ -1,7 +1,6 @@
-
+<?php include('../php/sessionProfile.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,8 +31,8 @@
                     <div class="card mb-4">
                         <div class="card-body text-center">
                             <img src="../img/icon2.jpg" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
-                            <h5 class="my-3">David</h5>
-                            <p class="text-muted mb-1">Marque Mega de Sousa</p>
+                            <h5 class="my-3"><?php echo "$nameUser";?></h5>
+                            <p class="text-muted mb-1"><?php echo "$lastName";?></p>
                             <div class="d-flex justify-content-center mb-2">
                                 <button type="button" class="btn btn-outline-primary ms-1">Change photo</button>
                             </div>
@@ -63,7 +62,7 @@
                                     <p class="mb-0">Name</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">David</p>
+                                    <p class="text-muted mb-0"><?php echo "$nameUser";?></p>
                                 </div>
                             </div>
                             <hr>
@@ -72,7 +71,7 @@
                                     <p class="mb-0">Last name</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Marques Mega de Sousa</p>
+                                    <p class="text-muted mb-0"><?php echo "$lastName";?></p>
                                 </div>
                             </div>
                             <hr>
@@ -81,7 +80,7 @@
                                     <p class="mb-0">Email</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">example@example.com</p>
+                                    <p class="text-muted mb-0"><?php echo "$email";?></p>
                                 </div>
                             </div>
                             <hr>
@@ -90,7 +89,7 @@
                                     <p class="mb-0">Phone</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">(097) 234-5678</p>
+                                    <p class="text-muted mb-0"><?php echo "$phone";?></p>
                                 </div>
                             </div>
                         </div>

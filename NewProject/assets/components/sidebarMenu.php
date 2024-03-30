@@ -17,7 +17,6 @@
                         <img src="../img/Dmega-logo.png" alt="site logo">
                     </div>
                 </div>
-
                 <div class="navigation-bar-right col-6 d-flex align-items-center justify-content-end">
                     <a href="../pages/profile.php" class="profile-btn bg-blue text-white btn-circle me-3">
                         <svg width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
