@@ -215,7 +215,6 @@
             <form action="../php/InsertEquity.php" method="POST">
                 <div class="modal-header">
                     <h4 class="modal-title">Registration reports</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -256,14 +255,13 @@
             <form>
                 <div class="modal-header">
                     <h4 class="modal-title">Add locations</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Nº Location and Description</label>
                         <input type="text" name="addLocations" class="form-control" required>
                     </div>
-                   
+
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name="submit" id="update" class="btn btn-primary">To add</button>
