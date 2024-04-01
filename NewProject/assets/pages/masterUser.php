@@ -1,6 +1,7 @@
 <?php include('../php/sessionMaster.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +23,7 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2><?php echo "$logged";?></h2>
+                        <h2><?php echo "$logged"; ?></h2>
                     </div>
                     <div class="col-sm-6">
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
@@ -63,28 +64,27 @@
                 </thead>
 
                 <?php
-                        while($user_data = mysqli_fetch_assoc($result)) {
+                while ($user_data = mysqli_fetch_assoc($result)) {
 
-                          echo  "<tr>";
-                          echo  "<td>";
-                          echo  "<span class='custom-checkbox'>";
-                          echo  "<input type='checkbox' id='checkbox1' name='options[]' value='1'>";
-                          echo  "<label for='checkbox1'></label>";
-                          echo  "</span>";
-                          echo  "</td>";
-                          echo  "<td>".$user_data['id']."</td>";
-                          echo  "<td>".$user_data['nameUser']."</td>";
-                          echo  "<td>".$user_data['lastName']."</td>";
-                          echo  "<td>".$user_data['email']."</td>";
-                          echo  "<td>".$user_data['passwordUsers']."</td>";
-                          echo  "<td>".$user_data['phone']."</td>";
-                          echo  "<td>".$user_data['dateOfCiation']."</td>";
-                          echo   "<td>";
-                          echo  "<a href='# type='button' class='edit' data-toggle='modal' data-target='#editEmployeeModal' ><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
-                          echo  "<a href='#' type='button' class='delete' data-toggle='modal' data-target='#confirm-delete'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>";
-
-                        }
-                        ?>
+                    echo  "<tr>";
+                    echo  "<td>";
+                    echo  "<span class='custom-checkbox'>";
+                    echo  "<input type='checkbox' id='checkbox1' name='options[]' value='1'>";
+                    echo  "<label for='checkbox1'></label>";
+                    echo  "</span>";
+                    echo  "</td>";
+                    echo  "<td>" . $user_data['id'] . "</td>";
+                    echo  "<td>" . $user_data['nameUser'] . "</td>";
+                    echo  "<td>" . $user_data['lastName'] . "</td>";
+                    echo  "<td>" . $user_data['email'] . "</td>";
+                    echo  "<td>" . $user_data['passwordUsers'] . "</td>";
+                    echo  "<td>" . $user_data['phone'] . "</td>";
+                    echo  "<td>" . $user_data['dateOfCiation'] . "</td>";
+                    echo   "<td>";
+                    echo  "<a href='# type='button' class='edit' data-toggle='modal' data-target='#editEmployeeModal' ><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
+                    echo  "<a href='#' type='button' class='delete' data-toggle='modal' data-target='#confirm-delete'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>";
+                }
+                ?>
         </div>
     </div>
     <!-- Add Modal HTML -->
@@ -135,7 +135,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <form method="POST" action="../php/editUsers.php">
-                    
+
                     <div class="modal-header">
                         <h4 class="modal-title">Edit Employee</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -143,16 +143,16 @@
                     <input type="hidden" id='id' name="id" value="id">
                     <div class="modal-body">
                         <div class="form-group">
-                             <label for="id">ID do Usuário:</label>
-                            <input type="text" id='alterName' name="alterName" class="form-control" placeholder="Enter first name"  value="" required >
+                            <label for="id">ID do Usuário:</label>
+                            <input type="text" id='alterName' name="alterName" class="form-control" placeholder="Enter first name" value="" required>
                         </div>
                         <div class="form-group">
                             <label>Last name</label>
-                            <input type="text" id='alterLastName' name="alterLastName" class="form-control" placeholder="Enter the last name" value="" required >
+                            <input type="text" id='alterLastName' name="alterLastName" class="form-control" placeholder="Enter the last name" value="" required>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="alterEmail" class="form-control" placeholder="Enter the email" value="" required >
+                            <input type="email" name="alterEmail" class="form-control" placeholder="Enter the email" value="" required>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="number" name="alterPhone"  class="form-control" placeholder="(xx) xxxx-xxxx" value="" required>
+                            <input type="number" name="alterPhone" class="form-control" placeholder="(xx) xxxx-xxxx" value="" required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -195,23 +195,26 @@
 </body>
 <script src="../js/userAdmin.js"></script>
 <script>
-$(document).ready(function() {
-    $('#confirm-delete').on('click', '.btn-ok', function(e) {
-        var id = $(this).data('id');
-        $.ajax({
-            type: "POST",
-            url: "../php/deleteUsers.php",
-            data: { id: id },
-            success: function(msg) {
-                $('#confirm-delete').modal('hide');
-                alert(msg);
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                $('#confirm-delete').modal('hide');
-                alert("Erro ao excluir o usuário: " + textStatus);
-            }
+    $(document).ready(function() {
+        $('#confirm-delete').on('click', '.btn-ok', function(e) {
+            var id = $(this).data('id');
+            $.ajax({
+                type: "POST",
+                url: "../php/deleteUsers.php",
+                data: {
+                    id: id
+                },
+                success: function(msg) {
+                    $('#confirm-delete').modal('hide');
+                    alert(msg);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    $('#confirm-delete').modal('hide');
+                    alert("Erro ao excluir o usuário: " + textStatus);
+                }
+            });
         });
     });
-});
 </script>
+
 </html>

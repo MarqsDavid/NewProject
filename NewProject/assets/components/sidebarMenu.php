@@ -231,7 +231,7 @@
                     </div>
                     <div class="form-group">
                         <label>Responsible</label>
-                        <textarea type="text" name="user" class="form-control" required></textarea>
+                        <input type="text" name="user" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Creation date</label>
