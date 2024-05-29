@@ -81,10 +81,11 @@
                     echo  "<td>" . $user_data['phone'] . "</td>";
                     echo  "<td>" . $user_data['dateOfCiation'] . "</td>";
                     echo   "<td>";
-                    echo  "<a href='# type='button' class='edit' data-toggle='modal' data-target='#editEmployeeModal' ><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
-                    echo  "<a href='#' type='button' class='delete' data-toggle='modal' data-target='#confirm-delete'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>";
+                    echo  "<a href='#' type='button' class='user-edit'   data-toggle='modal' data-target='#editEmployeeModal' data-id='{$user_data['id']}'><i class='material-icons text-primary' data-toggle='tooltip' title='Edit'>&#xE254;</i></a>";
+                    echo  "<a href='#' type='button' class='user-delete' data-toggle='modal' data-target='#confirm-delete' data-id='{$user_data['id']}'><i class='material-icons text-danger' data-toggle='tooltip' title='Delete'>&#xE872;</i></a>";
                 }
                 ?>
+                
         </div>
     </div>
     <!-- Add Modal HTML -->
@@ -134,16 +135,16 @@
     <div id="editEmployeeModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="POST" action="../php/editUsers.php">
+                <form method="POST" action="../php/alterUsers.php">
 
                     <div class="modal-header">
                         <h4 class="modal-title">Edit Employee</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
-                    <input type="hidden" id='id' name="id" value="id">
+                    <input type="" id="user-edit" name="id-user">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="id">ID do Usuário:</label>
+                            <label for="id">Name:</label>
                             <input type="text" id='alterName' name="alterName" class="form-control" placeholder="Enter first name" value="" required>
                         </div>
                         <div class="form-group">
@@ -164,8 +165,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-info" value="Save">
+                        <input type="button"  class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" name="update" class="btn btn-info" value="Save">
                     </div>
                 </form>
             </div>
@@ -175,7 +176,8 @@
     <div id="confirm-delete" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form>
+                <form method="POST" action="../php/deleteUsers.php">
+                    <input type="" id="user-delete" name="id">
                     <div class="modal-header">
                         <h4 class="modal-title">Delete Employee</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -186,7 +188,7 @@
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-danger btn-ok" value="Delete">
+                        <input type="submit" name="update" class="btn btn-danger btn-ok" value="Delete">
                     </div>
                 </form>
             </div>
@@ -194,27 +196,6 @@
     </div>
 </body>
 <script src="../js/userAdmin.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#confirm-delete').on('click', '.btn-ok', function(e) {
-            var id = $(this).data('id');
-            $.ajax({
-                type: "POST",
-                url: "../php/deleteUsers.php",
-                data: {
-                    id: id
-                },
-                success: function(msg) {
-                    $('#confirm-delete').modal('hide');
-                    alert(msg);
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    $('#confirm-delete').modal('hide');
-                    alert("Erro ao excluir o usuário: " + textStatus);
-                }
-            });
-        });
-    });
-</script>
+<script src="../js/setTheId.js"></script>
 
 </html>

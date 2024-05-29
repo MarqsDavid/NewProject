@@ -12,4 +12,10 @@ $(document).ready(function () {
 
     // Write-off item
     setItemId('.writeOff', '#writeOff_id');
+    // Edit user
+
+    setItemId('.user-edit', '#user-edit');
+    // Delete user
+
+    setItemId('.user-delete', '#user-delete');
 });
