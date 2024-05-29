@@ -4,10 +4,11 @@
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>User Profile with Timeline Photos and Settings - Bootdey.com</title>
+    <title>User Profile</title>
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/profile.css"> <!-- Removido link redundante -->
 </head>
 
 <body>
@@ -18,8 +19,7 @@
                 <div class="grid profile">
                     <div class="grid-header">
                         <div class="col-xs-2">
-                            <img src="../img/icon2.jpg" class="img-circle"
-                                alt="Profile Picture">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-circle" alt="Profile Picture">
                         </div>
                         <div class="col-xs-7">
                             <h3><?php echo "$nameUser";?></h3>
@@ -37,9 +37,9 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p><strong>Name:</strong><span>[<?php echo "$nameUser";?>]</span></p>
-                                        <p><strong>Last Name:</strong><span>[<?php echo "$lastName";?>]</span></p>
-                                        <p><strong>Email:</strong><span>[<?php echo "$email";?>]</span></p>
+                                        <p><strong>Name: </strong><span>[<?php echo "$nameUser";?>]</span></p>
+                                        <p><strong>Last Name: </strong><span>[<?php echo "$lastName";?>]</span></p>
+                                        <p><strong>Email: </strong><span>[<?php echo "$email";?>]</span></p>
                                     </div>
                                     <div class="col-md-6">
                                         <p><strong>Phone:</strong> <?php echo "$phone";?></p>
@@ -51,20 +51,61 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-horizontal">
+                                        <div class="">
                                             <div class="form-group">
-                                            <div class="col-md-6">
-                                        <p><strong>Name:</strong><span>[<?php echo "$nameUser";?>]</span></p>
-                                        <input type="text">
-                                        <p><strong>Last Name:</strong><span>[<?php echo "$lastName";?>]</span></p>
-                                        <input type="text">
-                                        <p><strong>Email:</strong><span>[<?php echo "$email";?>]</span></p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p><strong>Phone:</strong> <?php echo "$phone";?></p>
-                                    </div>
-                                </div>
+                                                <label class="col-sm-4 control-label"></label>
+                                                <div class="col-sm-2">
+                                                    <div class="form-outline" data-mdb-input-init>
+                                                        <input class="form-control" id="" type="text"
+                                                            value="<?php echo "$nameUser";?>" aria-label="readonly input example"
+                                                             />
+                                                        <label class="form-label" for="">Nome</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label"></label>
+                                                <div class="col-sm-2">
+                                                    <div class="form-outline" data-mdb-input-init>
+                                                        <input class="form-control" id="" type="text"
+                                                            value="<?php echo "$lastName";?>" aria-label=""
+                                                             />
+                                                        <label class="form-label" for="">Last Name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label"></label>
+                                                <div class="col-sm-2">
+                                                    <div class="form-outline" data-mdb-input-init>
+                                                        <input class="form-control" id="" type="text"
+                                                            value="<?php echo "$email";?>" aria-label=""
+                                                             />
+                                                        <label class="form-label" for="">Email</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label"></label>
+                                                <div class="col-sm-2">
+                                                    <div class="form-outline" data-mdb-input-init>
+                                                        <input class="form-control" id="" type="text"
+                                                            value="<?php echo "$phone";?>" aria-label=""
+                                                             />
+                                                        <label class="form-label" for="">phone</label>
+                                                    </div>
                                                     
+                                                </div>
+                                                <div class="form-group">
+                                                <label class="col-sm-4 control-label"></label>
+                                                <div class="col-sm-2">
+                                                    <div class="form-outline" data-mdb-input-init>
+                                                        <input class="form-control" id="" type="text"
+                                                            aria-label=""
+                                                             />
+                                                        <label class="form-label" for="">Password</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
