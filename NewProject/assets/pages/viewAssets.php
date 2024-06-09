@@ -53,11 +53,10 @@
                         </div>
                         <div class="container tbl-container">
 
-                            <div class="">
+                            <div>
                                 <table>
                                     <thead>
                                         <tr>
-
                                             <th>Descrição</th>
                                             <th>Nº Patrimônio </th>
                                             <th>Nº Localização</th>

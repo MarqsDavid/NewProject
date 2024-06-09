@@ -20,7 +20,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="../css/moveAssets.css">
-
 </head>
 
 <body>
@@ -45,15 +44,6 @@
                                     <h2>Move assets</h2>
                                 </div>
                                 <div class="col-sm-6">
-                                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><svg width="20" height="20" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                        </svg><span>Confirm</span></a>
-                                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
-                                        <svg width="20" height="20" fill="currentColor" class="bi bi-circle-square" viewBox="0 0 16 16">
-                                            <path d="M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z" />
-                                            <path d="M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1.57a6.953 6.953 0 0 1-1-.22v1.79A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4h-1.79c.097.324.17.658.22 1z" />
-                                        </svg>
-                                    </a>
                                     <div class="container-fluid">
                                         <form class="d-flex input-group w-auto">
                                             <input id="search" name="search" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
@@ -65,7 +55,6 @@
                                         </form>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <table class="table table-striped table-hover">
@@ -78,57 +67,67 @@
                                         </span>
                                     </th>
                                     <th>Description</th>
-                                    <th>Nº Patrimony </th>
+                                    <th>Nº Patrimony</th>
                                     <th>Nº Location</th>
                                     <th>Responsible</th>
                                     <th>Creation date</th>
                                     <th>Change</th>
-
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                while ($user_data = mysqli_fetch_assoc($result)) {
-                                    echo "<tr>";
-                                    echo "<td>";
-                                    echo "<span class='custom-checkbox'>";
-                                    echo "<input type='checkbox' id='checkbox1' name='options[]' value='1'>";
-                                    echo "<label for='checkbox1'></label>";
-                                    echo "</span>";
-                                    echo "</td>";
-                                    echo "<td style='display:none;'>" . htmlspecialchars($user_data['id']) . "</td>"; // Use 'display:none;' para ocultar a coluna
-                                    echo "<td>" . htmlspecialchars($user_data['ddescription']) . "</td>";
-                                    echo "<td>" . htmlspecialchars($user_data['assetNumber']) . "</td>";
-                                    echo "<td>" . htmlspecialchars($user_data['numberLocation']) . "</td>";
-                                    echo "<td>" . htmlspecialchars($user_data['responsible']) . "</td>";
-                                    echo "<td>" . htmlspecialchars($user_data['dateCreation']) . "</td>";
-                                    echo "<td>";
-                                    echo "<button class='edit'  data-toggle='modal' data-target='#changeModal' data-id='{$user_data['id']}'>";
-                                    echo "<svg width='20' height='20' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>";
-                                    echo "<path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z' />";
-                                    echo "<path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z' />";
-                                    echo "</svg>";
-                                    echo "</button>";
-                                    echo "<button class='writeOff'  data-toggle='modal' data-target='#writeOff' data-id='{$user_data['id']}'>";
-                                    echo "<svg  width='20' height='20' fill='currentColor' class='bi bi-circle-square' viewBox='0 0 16 16'>";
-                                    echo "<path d='M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z' />";
-                                    echo "<path d='M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1.57a6.953 6.953 0 0 1-1-.22v1.79A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4h-1.79c.097.324.17.658.22 1z' />";
-                                    echo "</svg>";
-                                    echo "</button>";
-                                    echo "</td>";
-                                    echo "</tr>";
-                                }
-                                ?>
-
+                                
+                                    <?php
+                                    while ($user_data = mysqli_fetch_assoc($result)) {
+                                        echo "<tr>";
+                                        echo "<td>";
+                                        echo "<span class='custom-checkbox'>";
+                                        echo "<input type='checkbox' id='checkbox1' id='checkbox{$user_data['id']}' name='options[]' value='1'>";
+                                        echo "<label for='checkbox1'></label>";
+                                        echo "</span>";
+                                        echo "</td>";
+                                        echo "<td style='display:none;'>" . htmlspecialchars($user_data['id']) . "</td>"; // Use 'display:none;' to hide the column
+                                        echo "<td>" . htmlspecialchars($user_data['ddescription']) . "</td>";
+                                        echo "<td>" . htmlspecialchars($user_data['assetNumber']) . "</td>";
+                                        echo "<td>" . htmlspecialchars($user_data['numberLocation']) . "</td>";
+                                        echo "<td>" . htmlspecialchars($user_data['responsible']) . "</td>";
+                                        echo "<td>" . htmlspecialchars($user_data['dateCreation']) . "</td>";
+                                        echo "<td>";
+                                        echo "<button class='edit' data-toggle='modal' data-target='#changeModal' data-id='{$user_data['id']}'>";
+                                        echo "<svg width='20' height='20' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>";
+                                        echo "<path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z' />";
+                                        echo "<path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z' />";
+                                        echo "</svg>";
+                                        echo "</button>";
+                                        echo "<button class='writeOff' data-toggle='modal' data-target='#writeOff' data-id='{$user_data['id']}'>";
+                                        echo "<svg width='20' height='20' fill='currentColor' class='bi bi-circle-square' viewBox='0 0 16 16'>";
+                                        echo "<path d='M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z' />";
+                                        echo "<path d='M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1.57a6.953 6.953 0 0 1-1-.22v1.79A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4h-1.79c.097.324.17.658.22 1z' />";
+                                        echo "</svg>";
+                                        echo "</button>";
+                                        echo "</td>";
+                                        echo "</tr>";
+                                    }
+                                    ?>
+                                    <button type="submit" class="btn btn-danger">
+                                        <svg width="20" height="20" fill="currentColor" class="bi bi-circle-square" viewBox="0 0 16 16">
+                                            <path d="M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z" />
+                                            <path d="M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1.57a6.953 6.953 0 0 1-1-.22v1.79A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4h-1.79c.097.324.17.658.22 1z" />
+                                        </svg>
+                                    </button>
+                                    <button type="submit" class="btn btn-success">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                                        <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                      </svg>
+                                    </button>
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal Alter -->
+            <!-- Modal Alter -->
         <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="changeModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

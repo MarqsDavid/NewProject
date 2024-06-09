@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="overview-section p-4">
+        <div class="overview-section p-5">
             <div class="row overview-section-title">
 
                 <div class="details">
@@ -71,73 +71,7 @@
                         </table>
                     </div>
 
-                    <!-- ================= NLast movements made by users================ -->
-                    <div class="recentAlteration">
-                        <div class="cardHeader">
-                            <h2>User changes</h2>
-                        </div>
-
-                        <table>
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="../img/icon2.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>David <br> <span>Italy</span></h4>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="../img/icon2.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>Amit <br> <span>India</span></h4>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="../img/icon2.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>David <br> <span>Italy</span></h4>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="../img/icon2.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>Amit <br> <span>India</span></h4>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="../img/icon2.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>David <br> <span>Italy</span></h4>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="../img/icon2.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>Amit <br> <span>India</span></h4>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
+                   
     </div>
 
     <!-- jquery -->

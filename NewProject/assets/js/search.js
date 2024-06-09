@@ -1,11 +1,13 @@
-var search = document.getElementById('search');
-
-search.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
+$(document).ready(function() {
+    $('#search').keydown(function(event) {
+      if (event.key === "Enter") {
         searchData();
+      }
+    });
+  
+    function searchData() {
+      var searchValue = $('#search').val();
+      window.location = 'search=' + searchValue;
     }
-});
-
-function searchData() {
-    window.location = 'search=' + search.value;
-}
+  });
+  

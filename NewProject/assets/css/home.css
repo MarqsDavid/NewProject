@@ -17,22 +17,12 @@
   --black2: #999;
 }
 
-
-
 /* ================== Order Details List ============== */
-.details {
-  position: relative;
-  width: 100%;
-  padding: 3px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 30px;
-  /* margin-top: 10px; */
-}
 
 .details .recentMovement {
   position: relative;
   min-height: 400px;
+  font-size: 15px;
   background: var(--white);
   padding: 10px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -49,7 +39,6 @@
   font-weight: 500;
   color: var(--blue);
 }
-
 
 .details table {
   width: 100%;
@@ -73,11 +62,10 @@
 .details .recentMovement table tbody tr:hover {
   background: var(--blue);
   color: var(--white);
-
 }
 
 .details .recentMovement table tr td {
-  padding: 25px;
+  padding: 15px;
 }
 
 .details .recentMovement table tr td:last-child {
@@ -92,33 +80,27 @@
   text-align: center;
 }
 
-.status.add {
+.status {
   padding: 10px 10px;
-  background: #8de02c;
-  color: var(--white);
   border-radius: 3px;
   font-size: 14px;
   font-weight: 500;
+}
+
+.status.add {
+  background: #8de02c;
+  color: var(--white);
 }
 
 .status.move {
-  padding: 10px 10px;
   background: #e9b10a;
   color: var(--white);
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .status.exit {
-  padding: 10px 10px;
   background: #f00;
   color: var(--white);
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: 500;
 }
-
 
 .recentAlteration {
   position: relative;
@@ -147,33 +129,7 @@
   object-fit: cover;
 }
 
-.recentAlteration table tr td {
-  padding: 10px 10px;
-}
-
-.recentAlteration table tr td h4 {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.2rem;
-}
-
-.recentAlteration table tr td h4 span {
-  font-size: 14px;
-  color: var(--black2);
-}
-
-.recentAlteration table tr:hover {
-  background: var(--blue);
-  color: var(--white);
-
-}
-
-.recentAlteration table tr:hover td h4 span {
-  color: var(--white);
-}
-
 /* ====================== Responsive Design ========================== */
-
 
 @media (max-width: 768px) {
   .details {
@@ -187,19 +143,15 @@
   .status.inProgress {
     white-space: nowrap;
   }
+
+  .cardHeader h2 {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
   .cardBox {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .cardHeader h2 {
-    font-size: 20px;
-  }
-
-  .user {
-    min-width: 40px;
   }
 
   .navigation {
@@ -210,7 +162,7 @@
 
   .navigation.active {
     width: 100%;
-    left: 0;
+    left: 100%;
   }
 
   .toggle {
