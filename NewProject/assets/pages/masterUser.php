@@ -37,9 +37,9 @@
                                 </svg></span></a>
                         <div class="container-fluid">
                             <form class="d-flex input-group w-auto">
-                                <input type="search" class="form-control rounded" placeholder="Search"
+                                <input type="search" id="search" name="search" class="form-control rounded" placeholder="Search"
                                     aria-label="Search" aria-describedby="search-addon" />
-                                <span class="input-group-text border-0" id="search-addon"></span>
+                                <span onclick="searchData()" class="input-group-text border-0" id="search-addon"></span>
                             </form>
                         </div>
                     </div>
@@ -157,17 +157,17 @@
                         <div class="form-group">
                             <label for="id">Name:</label>
                             <input type="text" id='alterName' name="alterName" class="form-control"
-                                placeholder="Enter first name" value="<?php echo "$nameUser";?>"  required>
+                                placeholder="Enter first name"  required>
                         </div>
                         <div class="form-group">
                             <label>Last name</label>
                             <input type="text" id='alterLastName' name="alterLastName" class="form-control"
-                                placeholder="Enter the last name" value="<?php echo "$lastName";?>" required>
+                                placeholder="Enter the last name" required>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" name="alterEmail" class="form-control" placeholder="Enter the email"
-                            value="<?php echo "$email";?>"required>
+                            required>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
@@ -177,7 +177,7 @@
                         <div class="form-group">
                             <label>Phone</label>
                             <input type="number" name="alterPhone" class="form-control" placeholder="(xx) xxxx-xxxx"
-                            value="<?php echo "$phone";?>" required>
+                             required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -213,5 +213,5 @@
 </body>
 <script src="../js/userAdmin.js"></script>
 <script src="../js/setTheId.js"></script>
-
+<script src="../js/search.js"></script>
 </html>

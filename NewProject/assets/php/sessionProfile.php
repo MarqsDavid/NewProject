@@ -9,6 +9,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['emailPassword'])
     header('Location: ../login.php');
 }
 
+$id = $_SESSION['id'];
 $nameUser = $_SESSION['nameUser'];
 $lastName = $_SESSION['lastName'];
 $phone = $_SESSION['phone'];

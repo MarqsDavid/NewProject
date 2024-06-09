@@ -21,6 +21,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['password
         $row = $result->fetch_assoc();
 
         // Set the user information in the session
+        $_SESSION['id'] = $row['id'];
         $_SESSION['nameUser'] = $row['nameUser'];
         $_SESSION['lastName'] = $row['lastName'];
         $_SESSION['phone'] = $row['phone'];
