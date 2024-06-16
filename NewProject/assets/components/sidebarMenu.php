@@ -126,7 +126,7 @@
                 <h5 class="text-uppercase text-grey navbar-sb-item-title fs-12 ls-1">reports</h5>
                 <ul class="navbar-sb-links p-0 list-unstyled">
                     <li class="navbar-sb-link my-3">
-                        <a href="#" class="text-decoration-none d-flex align-items-center justify-content-between">
+                        <a href="../php/registrationReports.php" class="text-decoration-none d-flex align-items-center justify-content-between">
                             <div class="text-light-blue d-flex align-items-center">
                                 <span class="navbar-sb-icon me-3">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-file-earmark-plus-fill" viewBox="0 0 16 16">
@@ -138,7 +138,7 @@
                         </a>
                     </li>
                     <li class="navbar-sb-link my-3">
-                        <a href="#" class="text-decoration-none d-flex align-items-center justify-content-between">
+                        <a href="../php/outputReports.php" class="text-decoration-none d-flex align-items-center justify-content-between">
                             <div class="text-light-blue d-flex align-items-center">
                                 <span class="navbar-sb-icon me-3">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-file-earmark-minus-fill" viewBox="0 0 16 16">
@@ -150,7 +150,7 @@
                         </a>
                     </li>
                     <li class="navbar-sb-link my-3">
-                        <a href="#" class="text-decoration-none d-flex align-items-center justify-content-between">
+                        <a href="../php/movementReports.php" class="text-decoration-none d-flex align-items-center justify-content-between">
                             <div class="text-light-blue d-flex align-items-center">
                                 <span class="navbar-sb-icon me-3">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-file-earmark-code-fill" viewBox="0 0 16 16">

@@ -13,12 +13,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="../css/moveAssets.css">
 </head>
 
@@ -34,7 +28,7 @@
             </div>
         </div>
 
-        <div class="overview-section p-4 ">
+        <div class="overview-section p-4">
             <div class="row overview-section-title">
                 <div class="container">
                     <div class="table-wrapper">
@@ -75,7 +69,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <form method="post" action="../php/checkboxMoveAssets.php">
+                                <form method="post" action="../php/checkboxMoveAssets.php">
                                     <?php
                                     while ($user_data = mysqli_fetch_assoc($result)) {
                                         echo "<tr>";
@@ -108,13 +102,39 @@
                                         echo "</tr>";
                                     }
                                     ?>
-                                    <button type="submit" class="btn btn-danger">
-                                        <svg width="20" height="20" fill="currentColor" class="bi bi-circle-square" viewBox="0 0 16 16">
-                                            <path d="M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z" />
-                                            <path d="M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1.57a6.953 6.953 0 0 1-1-.22v1.79A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4h-1.79c.097.324.17.658.22 1z" />
-                                        </svg>
-                                    </button>
-                                    </form>
+                                    <button type="" data-toggle='modal' data-target='#writeOffModal' class="btn btn-danger">Write Off Selected</button>
+                                    <!-- Modal Write Off HTML -->
+                                    <div class="modal fade" id="writeOffModal" tabindex="-1" role="dialog" aria-labelledby="writeOffModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="writeOffModalLabel">Write off assets</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <form action="" method="POST">
+                                                    <div class="modal-body">
+                                                        <p>Are you sure you want to write off this asset?</p>
+                                                        <p class="text-warning"><small>This action cannot be undone.</small></p>
+                                                        <div class="form-group">
+                                                            <label for="reasons">Write the reason for writing off the asset:</label>
+                                                            <textarea name="reasons" id="reasons" class="form-control" required></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="dateDischarge">Date of write-off:</label>
+                                                            <input type="date" name="dateDischarge" id="dateDischarge" class="form-control" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-danger">Write off</button>
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </tbody>
                         </table>
                     </div>
@@ -122,7 +142,7 @@
             </div>
         </div>
 
-            <!-- Modal Alter -->
+        <!-- Modal Alter -->
         <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="changeModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -153,7 +173,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- Modal Write Off HTML -->
         <div class="modal fade" id="writeOff" tabindex="-1" role="dialog" aria-labelledby="changeModalLabel" aria-hidden="true">
@@ -187,9 +206,15 @@
             </div>
         </div>
 
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/setTheId.js"></script>
+    <script src="../js/moveAssets.js"></script>
+    <script src="../js/search.js"></script>
 </body>
-<script src="../js/setTheId.js"></script>
-<script src="../js/moveAssets.js"></script>
-<script src="../js/search.js"></script>
 
 </html>
