@@ -30,7 +30,7 @@
                 <div class="blmd-continer">
                     <!-- Login Users -->
                     <form action="../assets/php/loginUser.php" method="POST" class="clearfix" id="login-form">
-                        <h1>Login</h1>
+                        <h1>Teste</h1>
                         <div class="col-md-12">
 
                             <div class="input-group blmd-form">
